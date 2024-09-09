@@ -1,4 +1,5 @@
-FROM nginx:1.25-alpine
+FROM nginx:alpine
+EXPOSE 8080
 RUN rm /etc/nginx/conf.d/default.conf
 RUN mkdir -p /var/www/static
 RUN chmod o+x /var/www/static -R

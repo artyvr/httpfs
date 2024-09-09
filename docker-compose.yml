@@ -1,9 +1,9 @@
-version: '3'
 services:
-  nginx:
-    build: ./nginx
+  httpfs:
+    image: artyvr/httpfs:latest
+    container_name: httpfs
     volumes:
       - ./static:/var/www/static
-    restart: always
+    restart: unless-stopped
     ports:
-      - 80:8080
+      - 8080:8080
