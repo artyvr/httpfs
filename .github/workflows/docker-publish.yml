@@ -25,23 +25,11 @@ jobs:
         with:
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/httpfs:latest
-      #- 
-        # name: Docker Hub Description
-        # uses: peter-evans/dockerhub-description@v4
-        # with:
-        #   username: ${{ vars.DOCKERHUB_USERNAME }}
-        #   password: ${{ secrets.DOCKERHUB_TOKEN }}
-        #   repository: ${{ vars.DOCKERHUB_USERNAME }}/httpfs
-        #   short-description: ${{ github.event.repository.description }}
-
-      - 
-        name: push README to Dockerhub
-        uses: christian-korneck/update-container-description-action@v1
-        env:
-          DOCKER_USER: ${{ vars.DOCKERHUB_USERNAME }}
-          DOCKER_PASS: ${{ secrets.DOCKERHUB_TOKEN }}
-        with:
-          destination_container_repo: ${{ vars.DOCKERHUB_USERNAME }}/httpfs
-          provider: dockerhub
-          short_description: ${{ github.event.repository.description }}
-          readme_file: 'README.md'
+    #   - 
+    #      name: Docker Hub Description
+    #      uses: peter-evans/dockerhub-description@v4
+    #      with:
+    #        username: ${{ vars.DOCKERHUB_USERNAME }}
+    #        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    #        repository: ${{ vars.DOCKERHUB_USERNAME }}/httpfs
+    #        short-description: ${{ github.event.repository.description }}
