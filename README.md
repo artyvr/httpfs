@@ -11,10 +11,10 @@ services:
     container_name: httpfs
     volumes:
       - ./static:/var/www/static
-      - ./images:/var/www/images
-      - ./icons:/var/www/icons
-      - ./videos:/var/www/videos
-      - ./audio:/var/www/audio
+      - ./images:/var/www/images #optional
+      - ./icons:/var/www/icons #optional
+      - ./videos:/var/www/videos #optional
+      - ./audio:/var/www/audio #optional
     restart: unless-stopped
     ports:
       - 8080:8080
