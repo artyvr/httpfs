@@ -1,6 +1,6 @@
 services:
   httpfs:
-    build: ./nginx
+    build: .
     container_name: httpfs
     volumes:
       - ./static:/var/www/static
