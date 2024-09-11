@@ -32,4 +32,4 @@ jobs:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: ${{ vars.DOCKERHUB_USERNAME }}/httpfs
-          readme-filepath: .README.md
+          readme-filepath: ./README.md
