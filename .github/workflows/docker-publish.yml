@@ -32,4 +32,4 @@ jobs:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: ${{ vars.DOCKERHUB_USERNAME }}/httpfs
-          short-description: ${{ github.event.repository.description }}
+          readme-filepath: .README.md
