@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - "main"
+    paths:
+      - README.md
 
 jobs:
   build:
@@ -32,4 +34,5 @@ jobs:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: ${{ vars.DOCKERHUB_USERNAME }}/httpfs
-          readme-filepath: httpfs/README.md
+          short-description: ${{ github.event.repository.description }}
+          enable-url-completion: true
