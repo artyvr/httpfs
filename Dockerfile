@@ -20,3 +20,4 @@ RUN mkdir -p /var/www/audio
 RUN chmod o+x /var/www/audio -R
 
 COPY default.conf /etc/nginx/conf.d
+COPY index.html /var/www
